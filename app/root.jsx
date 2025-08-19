@@ -9,6 +9,7 @@ import {
 
 import "./styles/reset.css";
 import "./styles/app.css";
+import Navbar from "./components/Navbar";
 import ClickSpark from './components/bits/ClickSpark';
 
 export default function  App() {
@@ -50,6 +51,7 @@ export function Layout({ children }) {
             ⚠️ This site requires JavaScript to function properly. Please enable JavaScript in your browser settings.
           </div>
         </noscript>
+        <Navbar></Navbar>
         {children}
         <ScrollRestoration />
         <Scripts />
