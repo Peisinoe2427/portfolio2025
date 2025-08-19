@@ -1,6 +1,7 @@
 import PictureTemplate from "../components/PictureTemplate";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
+import PixelTrail from '../components/bits/PixelTrail';
 
 export default function Home() {
   return (
@@ -43,6 +44,22 @@ export default function Home() {
         </p>
         <a href="/about" className="btn">Learn More</a>
       </section>
+
+
+
+      
+    {/* PIXEL TRAIL */}
+    {/* <div style={{ height: '500px', position: 'relative', overflow: 'hidden'}}>
+      <PixelTrail
+        gridSize={50}
+        trailSize={0.1}
+        maxAge={250}
+        interpolate={5}
+        color="#fff"
+        gooeyFilter={{ id: "custom-goo-filter", strength: 2 }}
+      />
+    </div> */}
+
     </main>
   );
 }

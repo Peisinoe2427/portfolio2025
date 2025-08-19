@@ -9,10 +9,22 @@ import {
 
 import "./styles/reset.css";
 import "./styles/app.css";
+import ClickSpark from './components/bits/ClickSpark';
 
 export default function  App() {
-  return <Outlet />;
+  return (
+    <ClickSpark
+      sparkColor='#B7C1FE'
+      sparkSize={10}
+      sparkRadius={15}
+      sparkCount={8}
+      duration={400}
+    >
+      <Outlet/>
+    </ClickSpark>
+  );
 }
+
 
 export function Layout({ children }) {
   return (
