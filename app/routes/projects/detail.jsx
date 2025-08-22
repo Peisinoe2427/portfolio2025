@@ -1,77 +1,124 @@
-import { useParams } from "react-router";
-import { projects } from "../../data/projects";
+import { useParams, Link } from "react-router";
+import { getProjectBySlug } from "../../utilis/utilis";
 
 export default function Detail() {
-
     const { slug } = useParams();
-    const p = projects.find(x => x.slug === slug);
+    const project = getProjectBySlug(slug);
 
-    if (!p) return <p>Project not found.</p>;
-    const restrictions = p.restrictions ?? p.restricitons ?? [];
+    if (!project) {
+        return (
+            <main>
+                <h1>Project not found</h1>
+                <p><Link to="/projects" className="btn btn--large btn--primary">Back to My Work</Link></p>
+            </main>
+            );
+    }
+
+    const restrictions =
+    project.restrictions || project.restricitons || []; 
 
     return (
-        <article className="project">
-        <header className="project__header">
-            <h1 className="project__title">{p.title}</h1>
-            <p className="project__meta">
-            {p.scope} • {p.delivered} • {p.duration}
-            </p>
-        </header>
+        <main>
+            <nav aria-label="Breadcrumb">
+                <Link to="/projects" >My Work</Link> / <span>{project.title}</span>
+            </nav>
 
-        <img className="project__cover" src={p.cover} alt="" />
 
-        {p.summary && <p className="project__summary">{p.summary}</p>}
+            <section>
+                <h1 className="visually-hidden">Detail page of the project</h1>
+                {project.cover && (
+                    <img src={project.cover} alt={project.title} />
+                )}
+                <div>
+                    <p>
+                        {project.scope}
+                        {project.delivered ? ` - [${project.delivered}]` : null}
+                    </p>
+                    <h2>{project.title}</h2>
+                    <div className="line--allWidth"></div>
+                    {project.summary && <p>{project.summary}</p>}
+                </div>
+            </section>
 
-        {p.goal && (
-            <>
-            <h2 className="project__sub">Goal</h2>
-            <p>{p.goal}</p>
-            </>
-        )}
+            <section>
+                <h3>Project Summary</h3>
+                <div>
+                    <p className="h5">Goal</p>
+                    {project.goal && (
+                        <>
+                            <h3>Goal</h3>
+                            <p>{project.goal}</p>
+                        </>
+                    )}
+                </div>
+                <div>
+                    <p className="h5">Restrictions</p>
+                    {restrictions.length > 0 && (
+                        <>
+                            <h3>Restrictions</h3>
+                            <ul>
+                            {restrictions.map((r, i) => <li key={i}>{r}</li>)}
+                            </ul>
+                        </>
+                    )}
+                </div>
 
-        {restrictions.length > 0 && (
-            <>
-            <h2 className="project__sub">Restrictions</h2>
-            <ul className="project__list">
-                {restrictions.map(item => <li key={item}>{item}</li>)}
-            </ul>
-            </>
-        )}
+                <p>
+                    {project.duration ? `Duration: ${project.duration}. ` : null}
+                    {project.academic?.year
+                        ? `Made during year ${project.academic.year}`
+                        : null}
+                    {project.academic?.course
+                        ? ` for ${project.academic.course}`
+                        : null}
+                </p>
 
-        {p.stack?.length > 0 && (
-            <>
-            <h2 className="project__sub">Stack</h2>
-            <ul className="project__tags">
-                {p.stack.map(t => <li key={t} className="tag">{t}</li>)}
-            </ul>
-            </>
-        )}
+                <div>
+                    {Array.isArray(project.process) && project.process.length > 0 && (
+                        <>
+                            <h3>Process</h3>
+                            <div>
+                            {project.process.map((t, i) => (
+                                <span key={i}>{t}</span>
+                            ))}
+                            </div>
+                        </>
+                    )}
+                </div>
+            </section>
+            
 
-        {p.process?.length > 0 && (
-            <>
-            <h2 className="project__sub">Process</h2>
-            <ul className="project__tags">
-                {p.process.map(step => <li key={step} className="tag">{step}</li>)}
-            </ul>
-            </>
-        )}
 
-        {p.link && (
-            <>
-            <h2 className="project__sub">Links</h2>
-            <ul className="project__links">
-                {Object.entries(p.link).filter(([,v]) => v).map(([k, v]) => (
-                <li key={k}><a href={v} target="_blank" rel="noreferrer">{k}</a></li>
-                ))}
-            </ul>
-            </>
-        )}
+            {Array.isArray(project.stack) && project.stack.length > 0 && (
+                <>
+                    <h3>Stack</h3>
+                    <ul>
+                    {project.stack.map((s, i) => <li key={i}>{s}</li>)}
+                    </ul>
+                </>
+            )}
 
-        {p.academic && (
-            <p className="project__meta">
-            Year {p.academic.year} - {p.academic.course}
-            </p>
-        )}
-        </article>
+            {(project.link?.website || project.link?.github) && (
+                <>
+                    <h3>Links</h3>
+                    <ul>
+                    {project.link.website && (
+                        <li>
+                        <a href={project.link.website} target="_blank" rel="noreferrer">
+                            Website
+                        </a>
+                        </li>
+                    )}
+                    {project.link.github && (
+                        <li>
+                        <a href={project.link.github} target="_blank" rel="noreferrer">
+                            GitHub
+                        </a>
+                        </li>
+                    )}
+                    </ul>
+                </>
+            )}
+        </main>
     );
 }

@@ -10,7 +10,7 @@ export default function Home() {
       <section className="hero">
         <h1>Designing for impact beyond the screen</h1>
         <p>Years of working as a dog trainer and as a team manager taught me to be observant, lead with empathy, and think on my feet, skills I now use to craft experiences for the person in front of the screen to the community and world they’re part of. </p>
-        <Link to="/projects" className="btn btn-primary">
+        <Link to="/projects" className="btn btn--large btn--primary">
           View My Work
         </Link>
         <div>
@@ -46,7 +46,7 @@ export default function Home() {
           </div>
           <div className="dna-item">
             <p className="h5">These are the traits, now meet the human</p>
-            <Link to="/about" className="btn btn-primary">
+            <Link to="/about" className="btn btn--large btn--primary">
               More About Me
             </Link>
           </div>
@@ -55,7 +55,7 @@ export default function Home() {
 
       <section>
         <h2>Featured Projects</h2>
-        <Link to="/projects" className="btn btn-primary">
+        <Link to="/projects" className="btn --large btn--primary">
           View All My Work
         </Link>
       </section>

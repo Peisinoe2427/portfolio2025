@@ -4,9 +4,7 @@ export default [
     layout("layouts/main-layout.jsx", [
         index("routes/home.jsx"),
         route("about", "routes/about.jsx"),
-        route("projects", "routes/projects/projects.jsx"),
-        route("projects/:slug", "routes/projects/detail.jsx"),
-        
-        route("*", "routes/not-found.jsx"),
+        route("my-work", "routes/projects/projects.jsx"),
+        route("my-work/:slug", "routes/projects/detail.jsx"),
     ]),
 ];

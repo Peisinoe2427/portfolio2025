@@ -9,7 +9,8 @@ import {
 
 import "./styles/reset.css";
 import "./styles/app.css";
-import Navbar from "./components/Navbar";
+import TabBar from "./components/TabBar";
+import TopBar from "./components/TopBar";
 import ClickSpark from './components/bits/ClickSpark';
 
 export default function  App() {
@@ -34,7 +35,7 @@ export function Layout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
-        <Links />
+        <Links /> 
         <style>{`
           .no-js-warning {
             background: #ffcccc;
@@ -51,8 +52,9 @@ export function Layout({ children }) {
             ⚠️ This site requires JavaScript to function properly. Please enable JavaScript in your browser settings.
           </div>
         </noscript>
-        <Navbar></Navbar>
+        <TopBar></TopBar>
         {children}
+        <TabBar></TabBar>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -92,40 +94,19 @@ export function ErrorBoundary({ error }){
 
 export function HydrateFallback(){
   return (
-    <div
-      style={{
-        height: "100vh",
-        width: "100vw",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#fff8e1",
-        fontFamily: "sans-serif",
-        color: "#333",
-      }}
-    >
-      <div
-        style={{
-          width: "3rem",
-          height: "3rem",
-          border: "4px solid #ccc",
-          borderTop: "4px solid #ff9800",
-          borderRadius: "50%",
-          animation: "spin 1s linear infinite",
-          marginBottom: "1rem",
-        }}
-      />
-      <p style={{ fontSize: "1rem", fontWeight: "500" }}>Loading, please wait...</p>
-
-      <style>
-        {`
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-        `}
-      </style>
-    </div>
+      <div className="spinner"></div>
   );
+}
+
+export function links() {
+  return [
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+    {
+      rel: "stylesheet",
+      href:
+        "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap",
+    },
+    { rel: "stylesheet", href: "https://fonts.cdnfonts.com/css/pp-neue-montreal" },
+  ];
 }
