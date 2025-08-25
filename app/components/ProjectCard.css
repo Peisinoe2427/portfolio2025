@@ -1,0 +1,43 @@
+/* Base */
+.card{
+    padding-block: var(--space-m);
+}
+.cardTitle{
+    border-bottom: var(--line) solid var(--grey03);
+    padding-block-end: var(--space-2xs);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.card__title{
+    padding-block-end: 0;
+}
+.card__summary{
+    padding-block-start: var(--space-xs);
+}
+.card__tag{
+    background-color: var(--lime);
+    padding-block: 0.3rem;
+    padding-inline: 0.7rem;
+    border-radius: 0.3rem;
+}
+/* Variant: default */
+.card--default .card__tag{
+    margin-inline-end: var(--space-2xs);
+}
+
+/* Variant: stacked */
+.card--stacked .card__cover{
+
+}
+
+
+/* Variant: compact */
+    /* change height cover img for mobile */
+
+
+
+
+
+
+/* .card[data-variant="stacked"] .card__cover{} */

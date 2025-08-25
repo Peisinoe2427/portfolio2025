@@ -12,6 +12,9 @@
   --grey02: #8D8D8D;
   --grey03: #414141;
 
+  --line:0.17rem;
+  --section-space: clamp(4.6875rem, 4.3207rem + 1.6304vw, 5.625rem);
+
   --font-titles: 'PP Neue Montreal', sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
 
@@ -118,6 +121,7 @@ h5, .h5{
 }
 .caption{
   font-size: var(--fs-1);
+  font-weight: 500;
 }
 
 /* ===================================================== */
@@ -143,14 +147,21 @@ h5, .h5{
 }
 .btn--small{
   min-height: 1.5rem;
+  max-height: 3.25rem;
   padding: 0.35rem 1.1rem;
 }
 .btn--icon{
-  padding: 0.35rem 0.4rem;
+  display: inline-grid;
+  padding-inline-start: 0.3rem;
+  padding-inline-end: 0.23rem;
+  padding-block: 0.3rem;
+  line-height: 0;
   margin-block-start: var(--space-m);
+  flex: 0 0 auto;
 }
 .btn--large{
   min-height: 2.85rem;
+  max-height: 3.25rem;
   padding: 0.5rem 1.75rem;
   margin-block-start: var(--space-l);
 }
@@ -268,8 +279,19 @@ h5, .h5{
 }
 
 
+
+
+
 @media (min-width: 27rem){
   /* mid-range styles */
+  .btn--icon {
+    padding-inline-start: 0.4rem;
+    padding-inline-end: 0.33rem;
+    padding-block: 0.4rem;
+  }
+  .margins{
+    margin-inline: var(--space-2xl);
+  }
   .tabbar {
     display: none;
   }
@@ -322,4 +344,7 @@ h5, .h5{
 
 @media (min-width: 64rem) {
   /* desktop styles */
+  .margins {
+      margin-inline: var(--space-5xl);
+    }
 }

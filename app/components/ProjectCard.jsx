@@ -1,34 +1,39 @@
 import { Link } from "react-router";
 import { ArrowUpRight } from "lucide-react";
-// import "./card.css";
+import "./ProjectCard.css";
 
-export default function ProjectCard ({ project }) {
+const VARIANTS = {
+    default: "card--default",
+    stacked: "card--stacked",
+    compact: "card--compact",
+};
+export default function ProjectCard ({project, variant = "default",  className = "",
+}) {
     if (!project) return null;
+    const vClass = VARIANTS[variant] ?? VARIANTS.default;
+    const classes = ["card", vClass, className].filter(Boolean).join(" ");
 
     return (
-        <article className="card">
-            <div>
-                {project.delivered && (
-                    <span>{project.delivered}</span>
-                )}
-                {/* {project.cover && (
-                    <img src={project.cover} alt={project.title} />
-                )} */}
-            </div>
+        <article className={classes} data-variant={variant}>
+            {/* {project.cover && (
+                <img src={project.cover} alt={project.title} className="card__cover" />
+            )} */}
 
-            <div>
-                <h2>{project.title}</h2>
-                <Link to={`/my-work/${project.slug || project.id}`} className="btn btn--small btn--primary btn--icon">
-                    <ArrowUpRight/>
+            {project.delivered && (
+                <span className="card__tag caption">{project.delivered}</span>
+            )}
+            {variant !== "compact" && project.scope && (
+                <span className="card__tag caption">{project.scope}</span>
+            )}
+
+            <div className="cardTitle">
+                <p className="card__title h5">{project.title}</p>
+                <Link to={`/my-work/${project.slug || project.id}`} className="btn btn--primary btn--icon" aria-label={`Open ${project.title}`}>
+                    <ArrowUpRight size={19} strokeWidth={2.5}/>
                 </Link>
             </div>
 
-            {project.summary && <p>{project.summary}</p>}
+            {project.summary && <p className="card__summary">{project.summary}</p>}
         </article>
     );
 }
-
-// TO USE
-// <ProjectCard variant="default" ... />
-// <ProjectCard variant="stacked" ... />
-// <ProjectCard variant="compact" ... />

@@ -119,6 +119,13 @@ export default function Detail() {
                     </ul>
                 </>
             )}
+
+            <h2>Explore More Projects</h2>
+            <div className="projects__grid">
+                {visible.map(p => (
+                    <ProjectCard key={p.slug || p.id} project={p} variant="default"/>
+                ))}
+            </div>
         </main>
     );
 }

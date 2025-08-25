@@ -1,0 +1,115 @@
+/* ===================================================== */
+/* ======================== DNA ===================== */
+/* ===================================================== */
+
+.dnaTitle, .dnaText{
+    padding-block: var(--space-2xs);
+}
+.dnaTitle{
+    border-bottom: var(--line) solid var(--grey03);
+}
+.dnaCTATitle{
+    border-bottom:0;
+}
+.dnaItem{
+    margin-block-end: var(--space-m);
+}
+.dnaCTA{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.dna{
+    background: linear-gradient(to bottom,
+                transparent,
+                var(--lime),
+                transparent);
+    margin-block: var(--section-space);
+}
+.btnDna{
+    margin-block-start: var(--space-2xs);
+}
+
+
+
+/* ===================================================== */
+/* ======================== FEATURED =================== */
+/* ===================================================== */
+.carousel-only {
+    display: block;
+}
+
+.grid-only {
+    display: none;
+}
+
+
+
+/* ===================================================== */
+/* ======================== DITHER ===================== */
+/* ===================================================== */
+.dither {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+    min-height:30vh;
+    margin-block-start: var(--section-space);
+}
+.ditherTitle, .dither-container{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.ditherTitle{
+    z-index: 30;
+    color: var(--white);
+    padding-block-end: 0;
+    font-family: var(--font-body);
+    font-weight: 900;
+    pointer-events: none;
+}
+.dither-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+@media (min-width: 27rem) {
+    /* DNA */
+    .dnaCTA {
+        display: block;
+        flex-direction: unset;
+        align-items: unset;
+        text-align: unset;
+    }
+    .dnaTitle {
+        border-bottom:0;
+    }
+    .dnaList{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+    }
+    .dnaItem {
+        border-top: var(--line) solid var(--grey03);
+        grid-column: 4/13;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+    }
+    .dnaText{
+        padding-block-start: var(--space-xs);
+        grid-column: 3/4;
+    }
+    .btnDna{
+        grid-column: 3/4;
+    }
+    
+    /* FEATURED */
+        .carousel-only {
+            display: none;
+        }
+
+        .grid-only {
+            display: block;
+        }
+}

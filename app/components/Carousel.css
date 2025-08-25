@@ -1,0 +1,74 @@
+.embla {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    --slides: 1;
+}
+.embla__viewport {
+    overflow: hidden;
+    width: 100%;
+}
+.embla__container {
+    display: flex;
+    gap: var(--space-s);
+    /* will-change: transform; */
+}
+.embla__slide {
+    flex: 100 0 100%;
+    min-width: 0;
+}
+
+.embla__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--grey03);
+    display: grid;
+    place-items: center;
+    padding: .25rem;
+    transition: color .2s ease;
+}
+
+.embla__arrow:hover {
+    color: var(--purple);
+}
+
+.embla__dots {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2xs);
+    margin-top: var(--space-2xs);
+}
+
+.dot {
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--grey02);
+    background: transparent;
+    cursor: pointer;
+}
+
+.dot.is-active {
+    background: var(--purple);
+    border-color: var(--grey03);
+}
+
+
+@media (min-width: 27rem) {
+    /* mid-range styles */
+    .embla {
+        --slides: 1.5;
+    }
+
+}
+
+@media (min-width: 64rem) {
+    /* desktop styles */
+    .embla {
+        --slides: 3;
+    }
+}

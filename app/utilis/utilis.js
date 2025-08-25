@@ -10,7 +10,7 @@ export const getProjectBySlug = (slug) => {
 
 export const getProjectsByScope = scope => {
     let list =
-        !scope || scope === "all"
+        !scope || scope === "All"
         ? getAllProjects()
         : projects.filter(p => p.scope === scope);
 

@@ -1,34 +1,37 @@
 import ProjectCard from "../../components/ProjectCard";
+import "./projects.css";
 import { useMemo, useState } from "react";
 import { getProjectsByScope, getUniqueScopes } from "../../utilis/utilis";
 
+
 export default function Projects() {
-    const scopes = useMemo(() => ["all", ...getUniqueScopes()], []);
-    const [active, setActive] = useState("all");
+    const scopes = useMemo(() => ["All", ...getUniqueScopes()], []);
+    const [active, setActive] = useState("All");
     const visible = useMemo(() => getProjectsByScope(active), [active]);
     return (
         <main>
             <h1>My work</h1>
-            <p>A selection of UX, design, and development work from my journey as a digital designer.</p>
-
             <nav aria-label="Project scopes">
                 {scopes.map(s => (
-                <button
-                    key={s}
-                    onClick={() => setActive(s)}
+                    <button
+                        key={s}
+                        onClick={e => {
+                            setActive(s);
+                            e.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        }
+                    }
                     aria-pressed={active === s}
-                >
-                    {s}
-                </button>
+                    className={active === s ? 'active' : ''}
+                    >
+                        {s}
+                    </button>
                 ))}
             </nav>
 
-            <section className="projects-list">
-                <div className="projects__grid">
-                    {visible.map(p => (
-                        <ProjectCard key={p.slug || p.id} project={p} />
-                    ))}
-                </div>
+            <section className="projectsGrid margins">
+                {visible.map(p => (
+                    <ProjectCard key={p.slug || p.id} project={p} variant="compact"/>
+                ))}
             </section>
         </main>
     )
