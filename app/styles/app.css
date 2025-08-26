@@ -87,6 +87,10 @@ img {
 .margins{
   margin-inline: var(--space-s) ;
 }
+
+.leftMargin{
+  padding-inline-start: var(--space-s);
+}
 /* ===================================================== */
 /* ======================== TYPO ======================= */
 /* ===================================================== */
@@ -201,6 +205,8 @@ h5, .h5{
   filter: brightness(0.95);
   box-shadow: 0 1px 0 0 var(--black);
 }
+
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: background-color .3s ease-in-out;
@@ -284,6 +290,9 @@ h5, .h5{
 
 @media (min-width: 27rem){
   /* mid-range styles */
+  .leftMargin {
+    padding-inline-start: var(--space-2xl);
+  }
   .btn--icon {
     padding-inline-start: 0.4rem;
     padding-inline-end: 0.33rem;
@@ -345,6 +354,9 @@ h5, .h5{
 @media (min-width: 64rem) {
   /* desktop styles */
   .margins {
-      margin-inline: var(--space-5xl);
-    }
+    margin-inline: var(--space-5xl);
+  }
+  .leftMargin {
+    padding-inline-start: var(--space-5xl);
+  }
 }

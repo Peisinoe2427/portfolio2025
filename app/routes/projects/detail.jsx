@@ -1,5 +1,8 @@
 import { useParams, Link } from "react-router";
 import { getProjectBySlug } from "../../utilis/utilis";
+import ProjectPicture from "../../components/ProjectPicture";
+import ContactSection from "../../components/ContactSection.jsx";
+
 
 export default function Detail() {
     const { slug } = useParams();
@@ -9,7 +12,7 @@ export default function Detail() {
         return (
             <main>
                 <h1>Project not found</h1>
-                <p><Link to="/projects" className="btn btn--large btn--primary">Back to My Work</Link></p>
+                <p><Link to="/my-work" className="btn btn--large btn--primary">Back to My Work</Link></p>
             </main>
             );
     }
@@ -25,10 +28,8 @@ export default function Detail() {
 
 
             <section>
+                <ProjectPicture variant="cover" slug={project.slug} title={project.title} />
                 <h1 className="visually-hidden">Detail page of the project</h1>
-                {project.cover && (
-                    <img src={project.cover} alt={project.title} />
-                )}
                 <div>
                     <p>
                         {project.scope}
@@ -41,6 +42,8 @@ export default function Detail() {
             </section>
 
             <section>
+                <ProjectPicture variant="summary" slug={project.slug} title={project.title} />
+
                 <h3>Project Summary</h3>
                 <div>
                     <p className="h5">Goal</p>
@@ -121,11 +124,13 @@ export default function Detail() {
             )}
 
             <h2>Explore More Projects</h2>
-            <div className="projects__grid">
+            {/* <div className="projects__grid">
                 {visible.map(p => (
                     <ProjectCard key={p.slug || p.id} project={p} variant="default"/>
                 ))}
-            </div>
+            </div> */}
+
+            <ContactSection/>
         </main>
     );
 }

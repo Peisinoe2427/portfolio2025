@@ -2,6 +2,8 @@ import ProjectCard from "../../components/ProjectCard";
 import "./projects.css";
 import { useMemo, useState } from "react";
 import { getProjectsByScope, getUniqueScopes } from "../../utilis/utilis";
+import ContactSection from "../../components/ContactSection.jsx";
+
 
 
 export default function Projects() {
@@ -10,8 +12,8 @@ export default function Projects() {
     const visible = useMemo(() => getProjectsByScope(active), [active]);
     return (
         <main>
-            <h1>My work</h1>
-            <nav aria-label="Project scopes">
+            <h1 className="titleMyWork">My work</h1>
+            <nav aria-label="Project scopes" className="navProject">
                 {scopes.map(s => (
                     <button
                         key={s}
@@ -33,6 +35,7 @@ export default function Projects() {
                     <ProjectCard key={p.slug || p.id} project={p} variant="compact"/>
                 ))}
             </section>
+            <ContactSection/>
         </main>
     )
 }

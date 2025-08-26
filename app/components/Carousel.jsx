@@ -34,7 +34,7 @@ export default function Carousel({ featured = [] }) {
                 <div className="embla__container">
                     {featured.map((p, i) => (
                         <div className="embla__slide" key={p.slug || p.id || i}>
-                            <ProjectCard project={p} variant="default" />
+                            <ProjectCard project={p} variant="stacked" />
                         </div>
                     ))}
                 </div>

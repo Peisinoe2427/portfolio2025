@@ -1,0 +1,73 @@
+.contact {
+    display: grid;
+    gap: .9rem;
+    max-width: 48rem
+}
+
+.field {
+    display: grid;
+    gap: .35rem;
+    justify-items: start;
+}
+
+.field--consent .checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-self: start;
+    cursor: pointer;
+}
+.field--consent input[type="checkbox"] {
+    margin: 0;
+    vertical-align: middle;
+    inline-size: 1.1rem;
+    block-size: 1.1rem;
+    accent-color: var(--purple);
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: .7rem .8rem;
+    border-radius: .8rem;
+    border: 1px solid var(--grey02);
+    font: inherit;
+    background: var(--white);
+}
+
+textarea {
+    resize: vertical
+}
+
+.checkbox {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    justify-self: flex-start;
+}
+
+.error {
+    color: #b30030;
+    font-size: .9rem
+}
+
+.ok {
+    color: var(--green);
+    font-size: .95rem
+}
+
+.actions {
+    display: grid;
+    gap: .6rem;
+}
+
+.actions .btn--form {
+    width: 100%;
+    max-width: none;
+    justify-content: center;
+}
+

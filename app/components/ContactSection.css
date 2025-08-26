@@ -1,0 +1,9 @@
+.formSection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.formBg{
+    background-color: var(--lime);
+    padding-block: var(--section-space);
+}

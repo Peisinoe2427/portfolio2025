@@ -1,10 +1,12 @@
-import PictureTemplate from "../components/PictureTemplate";
+import PicturePicture from "../components/ProjectPicture";
 import Carousel from "../components/Carousel";
 import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router";
 import "./home.css";
 import Dither from '../components/bits/ditherBg';
 import { getAllProjects} from "../utilis/utilis"; 
+import ContactSection from "../components/ContactSection.jsx";
+
 
 
 
@@ -28,7 +30,7 @@ export default function Home() {
       </section>
       
       <section className="dna">
-        <h2>My Design DNA</h2>
+        <h2 className="leftMargin">My Design DNA</h2>
         <div className="dnaList"> 
           <div className="dnaItem">
             <p className="h5 dnaTitle">Human + Society <br />Centered Mindset</p>
@@ -69,16 +71,14 @@ export default function Home() {
 
         {/* Desktop grid */}
         <div className="grid-only margins">
-          <div className="projects__grid">
             {featured.map(p => (
-              <ProjectCard key={p.slug || p.id} project={p} variant="default" />
+              <ProjectCard key={p.slug || p.id} project={p} variant="stacked" />
             ))}
-          </div>
         </div>
           
         <div className="margins">
           <p className="large">Curious for more? Explore the rest</p>
-          <Link to="/projects" className="btn btn--large btn--primary">
+          <Link to="/my-work" className="btn btn--large btn--primary">
             View All My Work
           </Link>
         </div>
@@ -97,11 +97,12 @@ export default function Home() {
           waveSpeed={0.08}
         />
       </section>
-
       
+      <ContactSection/>
     </main>
   );
 }
+
 {/* PIXEL TRAIL */}
     {/* <div style={{ height: '500px', position: 'relative', overflow: 'hidden'}}>
       <PixelTrail
@@ -114,26 +115,3 @@ export default function Home() {
       />
     </div> */}
 
-// import PictureByTemplate from "~/components/PictureByTemplate";
-
-// const widths = [901, 981, 1059, 1124, 1190, 1260, 1325, 1395, 1463, 1534, 1600, 1613];
-
-// <PictureByTemplate
-//   avifTemplate="/assets/hero/city/city_zlpk8g_c_scale,w_{w}.avif"
-//   fallbackTemplate="/assets/hero/city/city_a5wezl_c_scale,w_{w}.png"
-//   widths={widths}
-//   sizes="(max-width: 1613px) 100vw, 1613px"
-//   alt="woodprint image of the city of Antwerp"
-//   fetchPriority="high"
-//   width={1613}
-//   height={756}
-// />
-
- {/* <div className="hero__image">
-        <PictureTemplate
-          template="hero/city/city_zlpk8g_c_scale"
-          widths={[901, 981, 1059, 1124, 1190, 1613]}
-          alt="City view"
-          fetchPriority="high"
-        />
-      </div> */}

@@ -97,7 +97,7 @@ export const projects = [
     goal: "Design a digital-physical prototype that fosters belonging, collaboration, and creativity for people living on a 250-year interstellar generation ship. As part of a team, we explored how shared experiences and engaging activities can combat monotony, support mental health, and give travelers a sense of purpose during long-term space travel."
   },
   {
-    slug: "plantin-moretus",
+    slug: "moretus",
     title: "From Big Dreams to Bold Prints: Jan Moretus’ Story",
     summary: "A Responsive, interactive storytelling, with GSAP animations and mini-games.",
     delivered: "Dec 2025",

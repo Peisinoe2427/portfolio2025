@@ -13,6 +13,7 @@
 }
 .dnaItem{
     margin-block-end: var(--space-m);
+    padding-inline-end:var(--space-s);
 }
 .dnaCTA{
     display: flex;
@@ -95,7 +96,9 @@
         grid-column: 4/13;
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
+        padding-inline-end:var(--space-2xl);
     }
+
     .dnaText{
         padding-block-start: var(--space-xs);
         grid-column: 3/4;
@@ -112,4 +115,11 @@
         .grid-only {
             display: block;
         }
+}
+
+@media (min-width: 64rem) {
+  /* desktop styles */
+    .dnaItem {
+        padding-inline-end:var(--space-5xl);
+    }
 }
