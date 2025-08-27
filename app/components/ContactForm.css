@@ -70,4 +70,8 @@ textarea {
     max-width: none;
     justify-content: center;
 }
+.btn--form{
+    font-size: var(--fs0);
+}
+
 

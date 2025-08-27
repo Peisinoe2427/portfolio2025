@@ -1,12 +1,17 @@
 /* ===================================================== */
 /* ======================== DNA ===================== */
 /* ===================================================== */
-
+.card {
+    padding-block: 0;
+}
 .dnaTitle, .dnaText{
     padding-block: var(--space-2xs);
 }
 .dnaTitle{
     border-bottom: var(--line) solid var(--grey03);
+}
+.dnaList{
+    padding-inline-start: var(--space-s);
 }
 .dnaCTATitle{
     border-bottom:0;
@@ -44,6 +49,12 @@
 .grid-only {
     display: none;
 }
+.workCTA{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding-block-start: var(--space-l);
+}
 
 
 
@@ -55,8 +66,27 @@
     grid-template-columns: 1fr;
     place-items: center;
     text-align: center;
-    min-height:30vh;
-    margin-block-start: var(--section-space);
+    min-height:45vh;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--lime);
+}
+.dither .dither-container {
+    --fade-top: 1rem;
+    --fade-bottom: 1rem;
+    display: block;
+    width: 100%;
+
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0,
+            #000 var(--fade-top),
+            #000 calc(100% - var(--fade-bottom)),
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            transparent 0,
+            #000 var(--fade-top),
+            #000 calc(100% - var(--fade-bottom)),
+            transparent 100%);
 }
 .ditherTitle, .dither-container{
     grid-column: 1/2;
@@ -66,7 +96,6 @@
     z-index: 30;
     color: var(--white);
     padding-block-end: 0;
-    font-family: var(--font-body);
     font-weight: 900;
     pointer-events: none;
 }
@@ -75,8 +104,16 @@
     height: 100%;
     position: relative;
 }
+.featuredSection{
+    padding-block-end: var(--section-space);
+    background: linear-gradient(to top, var(--lime) 0%, var(--lime-light) 10%, transparent 35%);
+}
+
 @media (min-width: 27rem) {
     /* DNA */
+    .dnaList {
+        padding-inline-start: 0;
+    }
     .dnaCTA {
         display: block;
         flex-direction: unset;
@@ -108,13 +145,19 @@
     }
     
     /* FEATURED */
-        .carousel-only {
-            display: none;
-        }
+    .carousel-only {
+        display: none;
+    }
 
-        .grid-only {
-            display: block;
-        }
+    .grid-only {
+        display: block;
+    }
+    .grid-only .card--stacked{
+        padding-block-end: var(--space-s);
+    }
+    .featuredSection{
+        background: linear-gradient(to top, var(--lime) 0%, var(--lime-light) 10%, transparent 35%);
+    }
 }
 
 @media (min-width: 64rem) {

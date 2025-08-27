@@ -1,0 +1,200 @@
+.processTags{
+    display: flex;
+    gap: var(--space-2xs);
+    font-weight: 500;
+    font-size: var(--fs-1);
+    align-items: center;
+}
+.processList{
+    --sep: "–";
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    flex-wrap: wrap;
+    padding-block-start: var(--space-s);
+}
+.processTags+.processTags::before {
+    content: var(--sep);
+}
+.projectScope{
+    font-size: var(--fs0);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-block-end: var(--space-2xs);
+}
+.projectTitle{
+    border-bottom: var(--line) solid var(--grey02) ;
+    padding-block-end: var(--space-2xs);
+    font-weight: 400;
+}
+
+.headerInfo{
+    padding-block: var(--space-m);
+    padding-inline: var(--space-s);
+}
+
+.list--pill {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-s, .5rem);
+}
+.list--pill li {
+    position: relative;
+    padding-left: 1.25rem;
+
+}
+.list--pill li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .4em;
+    width: .5rem;
+    height: .5rem;
+    background: var(--black);
+}
+.list--restrictions li::marker {
+    color: var(--purple);
+}
+.subtitleProcess{
+    font-weight: 700;
+    font-size: var(--fs2);
+    padding-block-end: var(--space-s);
+}
+.detailCTASection, .projectProcess,.projectSummary,.projectLinks, .projectSuggestion{
+    margin-block-end: var(--section-space);
+}
+.projectPic{
+    padding-block-end: var(--space-s);
+}
+.projectHead, .sumGoals,
+.sumRestriction,
+.sumStack{
+    margin-block-end: var(--space-m);
+}
+
+.btn--cta{
+    font-size: var(--fs-1);
+    border: 1.5px solid var(--black);
+    font-weight: 500;
+    min-height: 2.2rem;
+    margin-block-end: var(--space-2xs);
+}
+.btn--cta span{
+    padding-inline-start: 0.03rem;
+}
+.suggList{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 1rem;
+}
+.ctaArrow{
+    flex: 0 0 auto;
+    width: 15rem;
+    height: auto;
+    stroke-width: 2;
+}
+.iconArrow {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: block;
+}
+.detailCTASection {
+    display: flex;
+    gap: var(--space-s);
+}
+
+
+
+@media (min-width: 27rem) {
+    
+    /* mid-range styles */
+    .btn--cta {
+        margin-block-end: 0;
+    }
+    .projectScope{
+        display: none;
+    }
+    .projectHead {
+        display: grid;
+        grid-template-columns:repeat(12, 1fr);
+        gap: 1rem;
+    }
+    .headerInfo{
+        padding-block: 0;
+        grid-column: 7/13;
+        padding-inline: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .headCover{
+        grid-column: 1/7;
+    }
+
+    .projectSummary{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 0.1fr 0.3fr 0.5fr 1fr;
+        gap: 1rem;
+    }
+    .projectSummary h3{
+        grid-column: 1/13;
+    }
+    .projectPic{
+        grid-column: 7/13;
+        grid-row: 2/4;
+    }
+    .sumGoals{
+        grid-column: 1/7;
+        grid-row: 2/3;
+    }
+    .sumStack{
+        grid-column: 7/13;
+    }
+    .sumRestriction{
+        grid-column: 1/7;
+        grid-row: 3/6;
+    }
+    .links{
+        display: flex;
+        gap: var(--space-2xs);
+        flex-wrap: wrap;
+    }
+    .links--cta {
+        grid-column: 6/13;
+    }
+    .iconArrow {
+        width: 10rem;
+        height: 10rem;
+        margin-block-end: 0;
+    }
+    .detailCTASection{
+        padding-block-start: var(--space-2xl);
+    }    
+    .detailCTAText {
+        align-self: flex-end;
+    }
+    .suggList{
+        grid-template-columns:repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 64rem) {
+    /* desktop styles */
+    .projectScope {
+        display: inline-block;
+    }
+    .headerInfo {
+        grid-column: 6/13;
+        align-self: flex-end;
+    }
+    .headCover {
+        grid-column: 1/6;
+    }
+    .links {
+        display: flex;
+        gap: var(--space-2xs);
+    }
+
+}

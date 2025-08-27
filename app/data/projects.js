@@ -20,8 +20,8 @@ export const projects = [
       course: "User Experience 3",
     },
     link:{
-      github: "",
       website:"https://www.figma.com/proto/eges1ht3kncRZnX9YTQeyX/UX3_Team14_Website?page-id=96%3A2&node-id=148-1352&viewport=-527%2C593%2C0.53&t=a8BdMumsHxgkjAiX-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=148%3A1352",
+      figjam:"https://www.figma.com/board/1QVyW90Bf3kRKVUtCOmsLW/Ux3--Stars-between-life-and-death?node-id=0-1&t=31k52UgkRjZekJHM-1",
     },
     restricitons:["Must create added value for society",
     "Outcome told with storytelling around a user’s experience",
@@ -40,7 +40,7 @@ export const projects = [
     delivered: "June 2025",
     scope: "End-to-end",
     duration: "1 month",
-    stack: ["React Router 7", "Supabase","Pubnub", "Vite", "Figma", "Javascript", "CSS", "Github"],
+    stack: ["React Router 7", "Supabase", "Vite", "Figma", "Javascript", "CSS", "Github"],
     cover: "/assets/projects/abby/cover.jpg",
     process: [ "Problem Space Definiton","User Research", "Wireframing", "Prototyping", "User Testing", "Information Architecture", "Team Coordination"],
     featured: true,

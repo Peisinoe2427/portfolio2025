@@ -45,9 +45,15 @@ button.active {
     margin-block-start: var(--space-xl);
     padding-inline: var(--space-s);
 }
+.projectsGrid{
+    padding-block-end: var(--section-space);
+}
 
-
-
+.myworkBG{
+    background-image: url("/assets/dithered-bg.png");
+    background-size: cover;
+    background-position: center;
+}
 
 
 @media (min-width: 27rem) {

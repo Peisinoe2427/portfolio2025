@@ -1,7 +1,8 @@
 import ContactForm from "./ContactForm.jsx";
+import { Icon } from "@iconify/react";
 import "./ContactForm.css";
 import "./ContactSection.css";
-import { div } from "three/tsl";
+
 
 export default function Footer() {
     return (
@@ -13,6 +14,20 @@ export default function Footer() {
                     <p className="h5">Let’s talk</p>
                     <p>creationsmelioristes@gmail.com</p>
                     <p>+32 456 39 12 23</p>
+                    <div className="footer__socials">
+                        <a href="https://github.com/Peisinoe2427" target="_blank" rel="noopener noreferrer">
+                            <Icon icon="mdi:github" />
+                        </a>
+                        <a href="https://www.instagram.com/creationsmelioristes" target="_blank" rel="noopener noreferrer">
+                            <Icon icon="mdi:instagram" />
+                        </a>
+                        <a href="https://www.behance.net/mlisalar" target="_blank" rel="noopener noreferrer">
+                            <Icon icon="mdi:behance" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/melisa-lauriola-ux-web-design/" target="_blank" rel="noopener noreferrer">
+                            <Icon icon="mdi:linkedin" />
+                        </a>
+                    </div>
                 </div>
 
                 <ContactForm endpoint="https://formspree.io/f/xpwjzydw" />

@@ -1,0 +1,20 @@
+.stack__item{
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    text-align: center;
+    background-color: var(--grey01);
+    padding-block: var(--space-xs);
+    gap: 0.05rem;
+    border-radius: 0.5rem;
+}
+
+.stack__caption{
+    font-size: var(--fs-1);
+    font-weight: 500;
+}
+.stack{
+    display: flex;
+    gap:var(--space-xs);
+    flex-wrap: wrap;
+}

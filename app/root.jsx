@@ -10,6 +10,7 @@ import {
 import "./styles/reset.css";
 import "./styles/app.css";
 import TabBar from "./components/TabBar";
+import Footer from "./components/Footer";
 import TopBar from "./components/TopBar";
 import ClickSpark from './components/bits/ClickSpark';
 
@@ -54,6 +55,7 @@ export function Layout({ children }) {
         </noscript>
         <TopBar></TopBar>
         {children}
+        <Footer></Footer>
         <TabBar></TabBar>
         <ScrollRestoration />
         <Scripts />
@@ -105,8 +107,8 @@ export function links() {
     {
       rel: "stylesheet",
       href:
-        "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap",
+        "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&display=swap",
     },
-    { rel: "stylesheet", href: "https://fonts.cdnfonts.com/css/pp-neue-montreal" },
+
   ];
 }

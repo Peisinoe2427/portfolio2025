@@ -15,7 +15,7 @@
   --line:0.17rem;
   --section-space: clamp(4.6875rem, 4.3207rem + 1.6304vw, 5.625rem);
 
-  --font-titles: 'PP Neue Montreal', sans-serif;
+  --font-titles: "Manrope", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
 
   --fs-2: clamp(0.72rem, 0.8102rem + -0.1002vw, 0.7901rem);
@@ -52,6 +52,7 @@ html {
   font-family: var(--font-body);
   font-size: var(--fs0);
   color: var(--black);
+  background-color: var(--white);
 }
 
 *,
@@ -94,7 +95,12 @@ img {
 /* ===================================================== */
 /* ======================== TYPO ======================= */
 /* ===================================================== */
-
+p{
+  line-height: 125%;
+}
+li{
+  line-height: 125%;
+}
 h1, h2, h3, h4, h5{
   font-family: var(--font-titles);
 }
@@ -102,13 +108,17 @@ h1, h2, h3, h4, h5{
 h1{
   font-size: var(--fs6);
   padding-block-end: var(--space-3xl);
+  font-weight: 600;
 }
 h2{
   font-size: var(--fs5);
   padding-block-end: var(--space-2xl);
+  font-weight: 700;
 }
 h3{
   font-size: var(--fs4);
+  padding-block-end: var(--space-l);
+  font-weight: 600;
 }
 h4{
   font-size: var(--fs3);
@@ -118,14 +128,35 @@ h5, .h5{
   font-size: var(--fs2);
   font-weight: 600;
   padding-block-end: var(--space-2xs);
+  line-height: 105%;
 }
 .large{
   font-size: var(--fs1);
-  font-weight: 400;
+  font-weight: 500;
 }
 .caption{
   font-size: var(--fs-1);
   font-weight: 500;
+}
+
+.breadcrumb {
+  font-size: var(--fs-1);
+  padding-block-end: var(--space-l);
+  padding-block-start: var(--space-2xl);
+}
+.breadcrumbLink{
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumbActive{
+  font-weight: 600;
+  text-decoration: underline;
+  transition: text-decoration .6s ease-in, ;
+}
+
+.breadcrumbLink:hover{
+  color: var(--grey02);
+  text-decoration: underline;
 }
 
 /* ===================================================== */
@@ -220,6 +251,52 @@ h5, .h5{
 /* ===================================================== */
 .topbar {
   display: none;
+}
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--purple);
+  z-index: 100;
+}
+.nav__label{
+  font-size: var(--fs-1);
+  font-weight: 600;
+  padding-block-end: 0.25rem;
+}
+.nav__list {
+  display: flex;
+  justify-content:center;
+  gap: var(--space-2xl);
+  align-items: center;
+  padding: var(--space-2xs) 0;
+}
+
+.nav__item {
+  text-align: center;
+}
+
+.nav__linkTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.0.5rem;
+  color: var(--black);
+  text-decoration: none;
+
+  border-bottom: 0.2rem solid transparent;
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.nav__linkTab svg {
+  display: block;
+}
+
+.nav__linkTab.active {
+  border-bottom-color: var(--lime);
+  color: var(--lime);
 }
 
 /* ===================================================== */

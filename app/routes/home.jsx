@@ -9,8 +9,6 @@ import ContactSection from "../components/ContactSection.jsx";
 
 
 
-
-
 export default function Home() {
   const featured = getAllProjects().filter(p => p.featured).slice(0, 3);
   return (
@@ -18,7 +16,7 @@ export default function Home() {
       <section className="hero">
         <h1>Designing for impact beyond the screen</h1>
         <p>Years of working as a dog trainer and as a team manager taught me to be observant, lead with empathy, and think on my feet, skills I now use to craft experiences for the person in front of the screen to the community and world they’re part of. </p>
-        <Link to="/projects" className="btn btn--large btn--primary">
+        <Link to="/my-work" className="btn btn--large btn--primary">
           View My Work
         </Link>
         <div>
@@ -61,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section >
+      <section className="featuredSection">
         <h2 className="margins">Featured Projects</h2>
 
         {/* Mobile carousel */}
@@ -76,8 +74,8 @@ export default function Home() {
             ))}
         </div>
           
-        <div className="margins">
-          <p className="large">Curious for more? Explore the rest</p>
+        <div className="margins workCTA">
+          <p className="large">Curious for more? <br />Explore the rest</p>
           <Link to="/my-work" className="btn btn--large btn--primary">
             View All My Work
           </Link>
@@ -103,15 +101,4 @@ export default function Home() {
   );
 }
 
-{/* PIXEL TRAIL */}
-    {/* <div style={{ height: '500px', position: 'relative', overflow: 'hidden'}}>
-      <PixelTrail
-        gridSize={50}
-        trailSize={0.1}
-        maxAge={250}
-        interpolate={5}
-        color="#fff"
-        gooeyFilter={{ id: "custom-goo-filter", strength: 2 }}
-      />
-    </div> */}
 

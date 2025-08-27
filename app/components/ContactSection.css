@@ -7,3 +7,14 @@
     background-color: var(--lime);
     padding-block: var(--section-space);
 }
+
+.formSection div {
+    padding-block-end: var(--space-2xs);
+}
+
+@media (min-width: 27rem) {
+    /* mid-range styles */
+    .formSection div {
+        padding-block-end: var(--space-l);
+    }
+}
