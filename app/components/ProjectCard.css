@@ -9,6 +9,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    gap: var(--space-xl);
 }
 .pic__img, .pic{
     border-radius: 0.3rem;

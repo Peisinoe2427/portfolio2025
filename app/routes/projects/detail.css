@@ -122,7 +122,7 @@
         gap: 1rem;
     }
     .headerInfo{
-        padding-block: 0;
+        padding-block-start: 0;
         grid-column: 7/13;
         padding-inline: 0;
         display: flex;

@@ -11,7 +11,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer__col">
-                    <h5>Get In Touch</h5>
+                    <h5 className="titleFooter">Get In Touch</h5>
                     <ul>
                         <li>
                             <Icon icon="mdi:map-marker" /> Rixensart, Belgium
@@ -26,7 +26,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer__col">
-                    <h5>Follow Me</h5>
+                    <h5 className="titleFooter">Follow Me</h5>
                     <div className="footer__socials">
                         <a href="https://github.com/Peisinoe2427" target="_blank" rel="noopener noreferrer">
                             <Icon icon="mdi:github" />

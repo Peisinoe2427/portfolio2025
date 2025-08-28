@@ -68,7 +68,7 @@ export const projects = [
   },
   {
     slug: "co-quest",
-    title: "Co-Quest",
+    title: "Co-Quest: How to Foster Belonging",
     summary: "A UX study on fostering belonging through shared problem-solving missions aboard a generational spaceship. (Or on earth!)",
     delivered: "March 2025",
     scope: "UX",
@@ -98,7 +98,7 @@ export const projects = [
   },
   {
     slug: "moretus",
-    title: "From Big Dreams to Bold Prints: Jan Moretus’ Story",
+    title: "From Big Dreams to Bold Prints",
     summary: "A Responsive, interactive storytelling, with GSAP animations and mini-games.",
     delivered: "Dec 2025",
     scope: "End-to-end",
@@ -133,7 +133,7 @@ export const projects = [
   },
   {
     slug: "mix-box-brand",
-    title: "Eco Cocktail Box: Brand Identity and App Design",
+    title: "Eco Cocktail Box Design",
     summary: "Branding and app design for a subscription brand targeting eco-conscious professionals.",
     delivered: "March 2025",
     scope: "Visual Design",

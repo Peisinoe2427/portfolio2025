@@ -20,17 +20,15 @@
     .footer__col p{
         font-size: var(--fs-1);
     }
-    .footer__col h5 {
-        margin-bottom: var(--space-xs);
-        font-size: var(--fs4);
+    .titleFooter{
+        font-size: var(--fs2);
     }
     .footer__socials{
         padding-block-start: var(--space-xs);
     }
     .footer__col ul {
         list-style: none;
-        padding: 0;
-        margin: 0;
+        padding-block-start: var(--space-xs);
     }
 
     .footer__col li {
