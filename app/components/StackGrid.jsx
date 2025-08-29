@@ -1,4 +1,4 @@
-import "./Stackgrid.css";
+import "./StackGrid.css";
 import { Icon } from "@iconify/react";
 
 const ICON_KEYS = {

@@ -1,6 +1,5 @@
 import "./Footer.css";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router";
 
 export default function Footer() {
     return (
