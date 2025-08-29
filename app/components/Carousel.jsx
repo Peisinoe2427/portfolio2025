@@ -2,7 +2,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useEffect, useState, useCallback } from "react";
 import ProjectCard from "../components/ProjectCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import "./carousel.css";
+import "./Carousel.css";
 
 
 export default function Carousel({ featured = [] }) {  
