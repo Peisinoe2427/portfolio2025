@@ -79,7 +79,6 @@ export const projects = [
       course: "User Experience 4",
     },
     link:{
-      github: "",
       website:"https://www.figma.com/proto/og68W296KdUXbMcggN6Bej/UX4_Co-Quest_Website?page-id=43%3A2&node-id=107-51&viewport=603%2C659%2C0.1&t=lz5TX9cq265hfIay-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=109%3A470",
       figma:"https://www.figma.com/design/HHwhUz7Q1QL6Yh5era19il/WIREFRAMES-co-quest?node-id=7421-4245&t=eUFOXXZpw18xwraF-1",
       figjam: "https://www.figma.com/board/LrFNxqsAC3deXrnWOCBbIx/UX4--Co-Quest-Process?node-id=0-1&t=2r1lDBEB3GeMJxUt-1" 
@@ -142,7 +141,6 @@ export const projects = [
       course: "Visual Design 4",
     },
     link:{
-      github: "",
       website:"https://www.figma.com/proto/Ce4Ima0TLZyNPxYGOyFnzl/MelisaLauriola_MixBox?page-id=1%3A20&node-id=3193-4309&viewport=199%2C287%2C0.13&t=AjvZMklmdumg1e4q-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3193%3A4309&show-proto-sidebar=1",
       figma:"https://www.figma.com/design/Ce4Ima0TLZyNPxYGOyFnzl/MelisaLauriola_MixBox?node-id=0-1&t=a0WkY9GYM9SldlnG-1"
     },
@@ -172,7 +170,6 @@ export const projects = [
       course: "Visual Design 2",
     },
     link:{
-      github: "",
       website:"https://www.figma.com/design/Ce4Ima0TLZyNPxYGOyFnzl/MelisaLauriola_MixBox?node-id=0-1&t=py2nUj2dmv3Nf0eL-1",
       figma: "https://www.figma.com/design/iLsK7lckzyVHky8upVTwHw/workshop-booking?node-id=0-1&t=sB07bTqbY2SIB4LU-1"
     },
@@ -202,7 +199,6 @@ export const projects = [
       course: "Visual Design 2",
     },
     link:{
-      github: "",
       website:"https://www.figma.com/proto/7stetokOoYJsKZ92WCyoEO/lauriolaM_Rasmussen?page-id=0%3A1&node-id=1-2&viewport=294%2C211%2C0.24&t=gVkrY0iXoJ8gjJ1f-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A2",
       figma: "https://www.figma.com/design/7stetokOoYJsKZ92WCyoEO/lauriolaM_Rasmussen?node-id=0-1&t=DRITKx94dEocWLIF-1"
     },
@@ -233,7 +229,6 @@ export const projects = [
       course: "Visual Design 3",
     },
     link:{
-      github: "",
       website:"https://www.figma.com/proto/agxAvzXmjZZXo3ghc2Ye1y/2DEV-E_LauriolaMelisa_Figma?page-id=47%3A388&node-id=47-389&p=f&viewport=52%2C272%2C0.04&t=T3JPMa6FSRQF2jzl-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=47%3A389",
       figma: "https://www.figma.com/design/agxAvzXmjZZXo3ghc2Ye1y/2DEV-E_LauriolaMelisa_Figma?node-id=47-388&t=NgOIKBNToN3tZAmc-1"
     },

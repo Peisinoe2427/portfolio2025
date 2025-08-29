@@ -99,14 +99,16 @@ export default function Detail() {
                 <div className="detailCTAText" >
                     <h3>Want to Jump Right In?</h3>
                 
-                    {hasLinks(project.link) && (
-                        <>
-                            <ul className="links links--cta">
-                                {Object.entries(CTA).map(([key, cfg]) => {
-                                    const href = normalizeUrl(project.link?.[key]);
-                                    if (!href) return null;
-                                    const { Icon, label, variant } = cfg;
-                                    return (
+                    {project.link && Object.keys(project.link).length > 0 && (
+                        <ul className="links links--cta">
+                            {Object.entries(project.link)
+                            .filter(([_, v]) => typeof v === "string" && v.trim() !== "")
+                            .map(([key, raw]) => {
+                                const cfg = CTA[key];
+                                if (!cfg) return null; 
+                                const href = raw.trim();
+                                const { Icon, label, variant } = cfg;
+                                return (
                                     <li key={key}>
                                         <a
                                         href={href}
@@ -117,13 +119,11 @@ export default function Detail() {
                                         >
                                         {Icon ? <Icon size={16} aria-hidden="true" /> : null}
                                         <span>{label}</span>
-
                                         </a>
                                     </li>
-                                    );
-                                })}
-                            </ul>
-                        </>
+                                );
+                            })}
+                        </ul>
                     )}
                 </div>
             </section>
