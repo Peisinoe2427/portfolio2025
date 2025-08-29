@@ -12,7 +12,6 @@ export const projects = [
     scope: "UX",
     duration: "4 months",
     stack: ["Figma","Figjam", "Sheets","Miro"],
-    cover: "/assets/projects/stars-between-life-and-death/cover.jpg",
     process: ["Desk Research", "Problem Space Definiton","User Research","Data analysis", "Team Coordination"],
     featured: true,
     academic: {
@@ -41,7 +40,6 @@ export const projects = [
     scope: "End-to-end",
     duration: "1 month",
     stack: ["React Router 7", "Supabase", "Vite", "Figma", "Javascript", "CSS", "Github"],
-    cover: "/assets/projects/abby/cover.jpg",
     process: [ "Problem Space Definiton","User Research", "Wireframing", "Prototyping", "User Testing", "Information Architecture", "Team Coordination"],
     featured: true,
     academic: {
@@ -74,7 +72,6 @@ export const projects = [
     scope: "UX",
     duration: "ongoing",
     stack: ["Figma","Figjam", "Miro", "Sheets"],
-    cover: "/assets/projects/co-quest/cover.jpg",
     process: ["Desk Research","Problem Space Definition", "Design Principles", "User Research", "Prototyping", "User Testing","Information Architecture", "Team Coordination"],
     featured: true,
     academic: {
@@ -104,7 +101,6 @@ export const projects = [
     scope: "End-to-end",
     duration: "1 month",
     stack: ["GSAP", "Vanilla JS", "CSS", "Vite", "Figma", "Photoshop"],
-    cover: "/assets/projects/plantin-family/cover.jpg",
     process: ["Responsive", "Progressive Enhancement", "Interactive"],
     featured: false,
     academic: {
@@ -139,7 +135,6 @@ export const projects = [
     scope: "Visual Design",
     duration: "3 months",
     stack: ["Illustrator","Figma", "Photoshop"],
-    cover: "/assets/projects/cocktail-box-brand/cover.jpg",
     process: ["Branding", "Logo Design", "Icon Design", "Packaging/mockups", "App Design"],
     featured: false,
     academic: {
@@ -170,7 +165,6 @@ export const projects = [
     scope: "Visual Design",
     duration: "1 month",
     stack: ["Illustrator","Figma"],
-    cover: "/assets/projects/workshop-booking/cover.jpg",
     process: ["Illustration", "UI Design", "Form Design", "Interactive", "Web Design", "App Design"],
     featured: false,
     academic: {
@@ -201,7 +195,6 @@ export const projects = [
     scope: "Visual Design",
     duration: "1 month",
     stack: ["Photoshop", "Figma"],
-    cover: "/assets/projects/rasmussen-storytelling/cover.jpg",
     process: ["Illustration", "Interactive", "Web Design", "Storytelling"],
     featured: false,
     academic: {
@@ -233,7 +226,6 @@ export const projects = [
     scope: "Visual Design",
     duration: "1 month",
     stack: ["Figma"],
-    cover: "/assets/projects/telenet-visual/cover.jpg",
     process: ["UI Design", "Responsive"],
     featured: false,
     academic: {

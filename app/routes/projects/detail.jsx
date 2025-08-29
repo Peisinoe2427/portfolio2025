@@ -156,9 +156,9 @@ export default function Detail() {
                     )}
                 </div>
 
-                <div className="sumRestriction">
+                
                     {restrictions.length > 0 && (
-                        <>
+                        <div className="sumRestriction">
                             <h3 className="subtitleProcess">Restrictions</h3>
                             <ul className="list list--pill">
                                 <li>
@@ -174,9 +174,9 @@ export default function Detail() {
                                 </li>
                                 {restrictions.map((r, i) => <li key={i}>{r}</li>)}
                             </ul>
-                        </>
+                        </div>
                     )}
-                </div>
+                
             </section>
             
 

@@ -61,7 +61,7 @@ export default function Home() {
         <div className="hero__text">
           <p className="hero__textTitle">Designing impact,<br /> not pixels</p>
           <div>
-            <p>Years of working as a dog trainer and as a team manager taught me to <strong>be observant, lead with empathy,</strong> and <strong>think on my feet</strong>, skills I now use to craft experiences for the person in front of the screen to the community and world they’re part of.</p>
+            <p>Years of working as a dog trainer and as a team manager taught me to <strong>be observant, lead with empathy,</strong> and <strong>think on my feet</strong>, skills I now use to craft experiences for the person in front of the screen to the community and world they&#39;re part of.</p>
             <Link to="/my-work" className="btn btn--large btn--primary">
               View My Work
             </Link>
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <div className="dnaItem">
             <p className="h5 dnaTitle">Analytical & Observant</p>
-            <p className="dnaText">I’m at my best in complex spaces, reading patterns and finding clarity where worlds and perspectives collide.</p>
+            <p className="dnaText">I&#39;m at my best in complex spaces, reading patterns and finding clarity where worlds and perspectives collide.</p>
           </div>
           <div className="dnaItem">
             <p className="h5 dnaTitle">Master Planner</p>

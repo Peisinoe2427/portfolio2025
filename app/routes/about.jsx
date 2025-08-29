@@ -37,40 +37,13 @@ export default function About() {
     return (
         <main>  
             <header class="about__header">
-                <picture className="img__about">
-                    <source
-                    sizes="(max-width: 303px) 100vw, 303px"
-                    srcSet="
-                        /assets/hero/mini-me_x5letb_c_scale,w_95.avif 95w, 
-                        /assets/hero/mini-me_x5letb_c_scale,w_303.avif 303w" 
-                    type="image/avif"
-                    />
-                    <img
-                    sizes="(max-width: 303px) 100vw, 303px"
-                    srcSet="
-                        /assets/hero/mini-me_tc0dp5_c_scale,w_95.png 95w, 
-                        /assets/hero/mini-me_tc0dp5_c_scale,w_181.png 181w,
-                        /assets/hero/mini-me_tc0dp5_c_scale,w_240.png 240w, 
-                        /assets/hero/mini-me_tc0dp5_c_scale,w_289.png 289w, 
-                        /assets/hero/mini-me_tc0dp5_c_scale,w_303.png 303w" 
-                    src="/assets/hero/mini-me_tc0dp5_c_scale,w_303.png"
-                    alt="Picture of Melisa Lauriola"
-                    width={303}
-                    height={303}
-                    fetchPriority="high"
-                    />
-                </picture>
                 <div className="aboutIntro">
                     <h1 class="about__name">
-                        <span class="about__firstname">Melisa</span>
-                        <span class="about__lastname">Lauriola</span>
+                        <span class="about__hey">Hey There,</span>
+                        <span class="about__me">I&#39;m Melisa Lauriola</span>
                     </h1>
 
-                    <ul class="heroList">
-                        <li>UX</li>
-                        <li>Visual</li>
-                        <li>Dev</li>
-                    </ul>
+                    <p>I debug, design, detangle and deliver</p>
                 </div>
                 
                 <section className="about__years">
@@ -81,7 +54,7 @@ export default function About() {
                         style={{ "--w": `${(x.years / maxYears) * 100}%`, "--bg": x.color }}
                         >
                             <strong className="yearsFont">{x.title}</strong>
-                            <p>{x.note}</p>
+                            <p className="fieldFont">{x.note}</p>
                         </div>
                     ))}
                 </section>

@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer__content margins">
                 <div className="footer__col">
-                    <p>© Creations Melioristes 2025</p>
+                    <p>&#169; Creations Melioristes 2025</p>
                 </div>
 
                 <div className="footer__col">
@@ -17,7 +17,7 @@ export default function Footer() {
                             <Icon icon="mdi:map-marker" /> Rixensart, Belgium
                         </li>
                         <li>
-                            <Icon icon="mdi:phone" /> +32 456 39 12 23
+                            <Icon icon="mdi:phone" /> &#43;32 456 39 12 23
                         </li>
                         <li>
                             <Icon icon="mdi:email" /> creationsmelioristes@gmail.com

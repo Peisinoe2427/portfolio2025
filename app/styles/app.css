@@ -373,15 +373,15 @@ strong{
   gap: var(--space-m);
 }
 
-
+#formSection {
+  scroll-margin-top: var(--nav-height);
+  padding-block-start: var(--section-space);
+}
 
 
 @media (min-width: 27rem){
   /* mid-range styles */
-  #formSection {
-    scroll-margin-top: var(--nav-height);
-    padding-block-start: var(--section-space);
-  }
+
   .leftMargin {
     padding-inline-start: var(--space-2xl);
   }

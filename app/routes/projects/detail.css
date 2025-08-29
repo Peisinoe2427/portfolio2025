@@ -84,11 +84,7 @@
 .btn--cta span{
     padding-inline-start: 0.03rem;
 }
-.suggList{
-    display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap: 1rem;
-}
+
 .ctaArrow{
     flex: 0 0 auto;
     width: 15rem;
@@ -105,9 +101,14 @@
     gap: var(--space-s);
 }
 
+.suggList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
 
 
-@media (min-width: 27rem) {
+@media (min-width: 432px) {
     
     /* mid-range styles */
     .btn--cta {
@@ -175,12 +176,12 @@
     .detailCTAText {
         align-self: flex-end;
     }
-    .suggList{
-        grid-template-columns:repeat(4, 1fr);
+    .suggList {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
     /* desktop styles */
     .projectScope {
         display: inline-block;
@@ -195,6 +196,9 @@
     .links {
         display: flex;
         gap: var(--space-2xs);
+    }
+    .suggList {
+        grid-template-columns: repeat(4, 1fr);
     }
 
 }

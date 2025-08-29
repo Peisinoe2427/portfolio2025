@@ -6,7 +6,7 @@
     padding-block-end: var(--section-space);
     padding-block-start: var(--space-xl);
     background-image: url("/assets/other/green-bg-dither.jpg");
-    background-position: center calc(100% + 70px);
+    background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -43,9 +43,7 @@
 /* ===================================================== */
 /* ======================== DNA ===================== */
 /* ===================================================== */
-.card {
-    padding-block: 0;
-}
+
 .dnaTitle, .dnaText{
     padding-block: var(--space-2xs);
 }
@@ -157,6 +155,9 @@
 
 @media (min-width: 27rem) {
     /* HERO */
+    .hero {
+        background-position: center calc(100% + 70px);
+    }
     .hero__intro{
         display: grid;
         grid-template-columns: repeat(12, 1fr);

@@ -7,7 +7,7 @@ const schema = z.object({
     name: z.string().min(2, "Please write your name").max(80, "Too long"),
     email: z.string().email("Invalid email"),
     subject: z.string().min(3, "Please add a subject").max(120, "Keep it concise"),
-    message: z.string().min(10, "Tell me a bit more").max(2000, "That’s a lot!"),
+    message: z.string().min(10, "Tell me a bit more").max(2000, "That is a lot!"),
     consent: z.literal(true, { errorMap: () => ({ message: "Consent required" }) }),
     website: z.string().max(0, "Leave this field empty"),
 });
@@ -94,7 +94,7 @@ export default function ContactForm({endpoint = "https://formspree.io/f/xpwjzydw
                 <button type="submit" disabled={isSubmitting} className="btn btn--large btn--primary btn--form">
                 {isSubmitting ? "Sending..." : "Send message"}
                 </button>
-                {status === "ok" && <p className="ok" role="status">Thanks! I’ll get back to you soon.</p>}
+                {status === "ok" && <p className="ok" role="status">Thanks! I&#39;ll get back to you soon.</p>}
                 {status === "err" && <p className="error" role="alert">Something went wrong. Try again.</p>}
                 {document.querySelector('.btn--form')?.disabled}
             </div>

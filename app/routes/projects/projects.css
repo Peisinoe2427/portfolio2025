@@ -64,7 +64,7 @@ button.active {
         gap: 1rem;
     }
 
-    .card {
+    .projectsGrid .card {
         grid-column: span 4;
     }
     .navProject, .titleMyWork{
