@@ -2,7 +2,7 @@
 /* ======================== GLOBAL ===================== */
 /* ===================================================== */
 :root {
-  --purple: #B7C1FE;
+  --purple: rgb(183, 193, 254);
   --purple-light: #F1F3FF;
   --lime: #E4FF98;
   --lime-light: #FAFFEA;
@@ -53,6 +53,7 @@ html {
   font-size: var(--fs0);
   color: var(--black);
   background-color: var(--white);
+  scroll-behavior: smooth;
 }
 
 *,
@@ -157,6 +158,9 @@ h5, .h5{
 .breadcrumbLink:hover{
   color: var(--grey02);
   text-decoration: underline;
+}
+strong{
+  font-weight: 600;
 }
 
 /* ===================================================== */
@@ -361,12 +365,23 @@ h5, .h5{
   }
 }
 
+.heroList {
+  font-size: var(--fs1);
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  gap: var(--space-m);
+}
 
 
 
 
 @media (min-width: 27rem){
   /* mid-range styles */
+  #formSection {
+    scroll-margin-top: var(--nav-height);
+    padding-block-start: var(--section-space);
+  }
   .leftMargin {
     padding-inline-start: var(--space-2xl);
   }

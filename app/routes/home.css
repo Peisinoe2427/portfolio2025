@@ -1,4 +1,46 @@
 /* ===================================================== */
+/* ======================== HERO ===================== */
+/* ===================================================== */
+
+.hero{
+    padding-block-end: var(--section-space);
+    padding-block-start: var(--space-xl);
+    background-image: url("/assets/other/green-bg-dither.jpg");
+    background-position: center calc(100% + 70px);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hero__info h1{
+    padding-block-end: var(--space-2xs);
+    border-bottom: var(--line) solid var(--grey02);
+    margin-block-end: var(--space-xs);
+}
+.hero__info p{
+    font-size: var(--fs2);
+    font-weight: 200;
+}
+
+.hero__textTitle{
+    font-size: var(--fs3);
+    font-weight: 600;
+    padding-block-end: var(--space-s);
+}
+.hero__intro{
+    padding-block-end: var(--space-xl);
+}
+.hero__info{
+    padding-inline-start: var(--space-s);
+}
+.hero__text {
+    padding-inline: var(--space-s);
+}
+.hero__text div{
+    padding-block-start: 0.5rem;
+}
+
+
+
+/* ===================================================== */
 /* ======================== DNA ===================== */
 /* ===================================================== */
 .card {
@@ -28,10 +70,10 @@
 }
 .dna{
     background: linear-gradient(to bottom,
-                transparent,
-                var(--lime),
-                transparent);
-    margin-block: var(--section-space);
+                var(--lime) 0%,
+                var(--lime-light) 30%,
+                transparent 40%);
+    margin-block-end: var(--section-space);
 }
 .btnDna{
     margin-block-start: var(--space-2xs);
@@ -94,10 +136,14 @@
 }
 .ditherTitle{
     z-index: 30;
-    color: var(--white);
     padding-block-end: 0;
+    color: var(--grey03);
     font-weight: 900;
     pointer-events: none;
+    text-shadow:
+        0 1px 0 rgba(0, 0, 0, .25),
+        0 2px 2px rgba(0, 0, 0, .15),
+        0 6px 12px rgba(0, 0, 0, .12);
 }
 .dither-container {
     width: 100%;
@@ -110,6 +156,44 @@
 }
 
 @media (min-width: 27rem) {
+    /* HERO */
+    .hero__intro{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+    }
+    .img__hero{
+        grid-column: 1/6;
+        justify-self: center;
+    }
+    .hero__info{
+        grid-column: 7/13;
+        align-self: end;
+    }
+    .hero__text {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+    }
+    .hero__textTitle {
+        grid-column: 2/6;
+        padding-block-end: 0;
+        padding-inline-start: 1rem;
+    }
+    .hero__text div {
+        grid-column: 7/13;
+        padding-inline-end: var(--space-2xl);
+    }
+
+
+    .hero__info {
+        padding-inline-start: 0;
+    }
+    .hero__text {
+        padding-inline: 0;
+    }
+
+
     /* DNA */
     .dnaList {
         padding-inline-start: 0;
@@ -162,7 +246,7 @@
 
 @media (min-width: 64rem) {
   /* desktop styles */
-    .dnaItem {
+    .dnaItem, .hero__text div {
         padding-inline-end:var(--space-5xl);
     }
 }

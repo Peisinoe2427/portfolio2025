@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 
 export default function TopBar() {
     return (
@@ -9,7 +9,9 @@ export default function TopBar() {
                 <NavLink to="/my-work" className="nav__link">My Work</NavLink>
                 <NavLink to="/about" className="nav__link">About</NavLink>
         
-                <Link to="/about" className="nav__contact btn btn--small btn--third">Contact Me <ArrowUpRight className="ml-2 w-4 h-4" /></Link>
+                <a href="#formSection" className="nav__contact btn btn--small btn--third">
+                    Contact Me <ArrowUpRight className="ml-2 w-4 h-4" />
+                </a>
             </nav>
         </header>
     );

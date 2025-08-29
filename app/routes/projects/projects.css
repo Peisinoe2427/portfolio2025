@@ -50,7 +50,7 @@ button.active {
 }
 
 .myworkBG{
-    background-image: url("/assets/dithered-bg.png");
+    background-image: url("/assets/other/dithered-bg.png");
     background-size: cover;
     background-position: center;
 }

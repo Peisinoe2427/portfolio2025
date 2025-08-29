@@ -13,12 +13,20 @@ const ICON_KEYS = {
     "Vanilla JS": "simple-icons:javascript",
     CSS: "simple-icons:css3",
     Github: "simple-icons:github",
-    GSAP: "simple-icons:greensock",
     Illustrator: "simple-icons:adobeillustrator",
     Photoshop: "simple-icons:adobephotoshop",
+
+    HTML: "simple-icons:html5",
+    React: "simple-icons:react",
+    GSAP: "simple-icons:greensock",
+    ML5: "carbon:machine-learning-model", 
+    PHP: "simple-icons:php",
+    Strapi: "simple-icons:strapi",
+    Astro: "simple-icons:astro",
 };
 
 export default function StackGrid({ items = [], size = 28}) {
+
     return (
         <ul className="stack" role="list">
             {items.map(name => (

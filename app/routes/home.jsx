@@ -14,16 +14,58 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <h1>Designing for impact beyond the screen</h1>
-        <p>Years of working as a dog trainer and as a team manager taught me to be observant, lead with empathy, and think on my feet, skills I now use to craft experiences for the person in front of the screen to the community and world they’re part of. </p>
-        <Link to="/my-work" className="btn btn--large btn--primary">
-          View My Work
-        </Link>
-        <div>
-            <p className="h5">Melisa Lauriola</p>
-            <p className="large">UX</p>
-            <p className="large">VISUAL DESIGN</p>
-            <p className="large">WEB DEV</p>
+        <div className="hero__intro">
+          <picture className="img__hero">
+            <source
+              sizes="(max-width: 600px) 100vw, 600px"
+              srcSet="
+                /assets/hero/hero_hti4ik_c_scale,w_320.avif 320w,
+                /assets/hero/hero_hti4ik_c_scale,w_576.avif 576w,
+                /assets/hero/hero_hti4ik_c_scale,w_600.avif 600w"
+              type="image/avif"
+            />
+            <img
+              sizes="(max-width: 600px) 100vw, 600px"
+              srcSet="
+                /assets/hero/hero_tvcykr_c_scale,w_320.png 320w,
+                /assets/hero/hero_tvcykr_c_scale,w_363.png 363w,
+                /assets/hero/hero_tvcykr_c_scale,w_402.png 402w,
+                /assets/hero/hero_tvcykr_c_scale,w_438.png 438w,
+                /assets/hero/hero_tvcykr_c_scale,w_472.png 472w,
+                /assets/hero/hero_tvcykr_c_scale,w_503.png 503w,
+                /assets/hero/hero_tvcykr_c_scale,w_530.png 530w,
+                /assets/hero/hero_tvcykr_c_scale,w_558.png 558w,
+                /assets/hero/hero_tvcykr_c_scale,w_586.png 586w,
+                /assets/hero/hero_tvcykr_c_scale,w_594.png 594w,
+                /assets/hero/hero_tvcykr_c_scale,w_600.png 600w" 
+              src="/assets/hero/hero_tvcykr_c_scale,w_600.png"
+              alt="Picture of Melisa Lauriola"
+              width={600}
+              height={361}
+              loading="eager"
+              fetchPriority="high"
+            />
+          </picture>
+          
+          <div className="hero__info">
+            <p>Portfolio 2025</p>
+            <h1>Melisa Lauriola</h1>
+            <ul className="heroList">
+              <li>UX</li>
+              <li> Visual</li>
+              <li>Dev</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="hero__text">
+          <p className="hero__textTitle">Designing impact,<br /> not pixels</p>
+          <div>
+            <p>Years of working as a dog trainer and as a team manager taught me to <strong>be observant, lead with empathy,</strong> and <strong>think on my feet</strong>, skills I now use to craft experiences for the person in front of the screen to the community and world they’re part of.</p>
+            <Link to="/my-work" className="btn btn--large btn--primary">
+              View My Work
+            </Link>
+          </div>
         </div>
       </section>
       
@@ -88,10 +130,10 @@ export default function Home() {
           waveColor={[0.717, 0.757, 0.996]}
           disableAnimation={false}
           enableMouseInteraction={true}
-          mouseRadius={0.5}
-          colorNum={6}
-          waveAmplitude={0.2}
-          waveFrequency={0.1}
+          mouseRadius={0.2}
+          colorNum={3}
+          waveAmplitude={0.7}
+          waveFrequency={0.7}
           waveSpeed={0.08}
         />
       </section>

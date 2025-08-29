@@ -8,6 +8,8 @@
     .footer {
         display: block;
         background-color: var(--purple);
+        background-image: linear-gradient(rgba(183, 193,254, 1), rgba(183,193,254, .75)), url("/assets/other/dither-texture.png");
+        background-size: cover;
         padding-block: var(--space-2xl);
     }
 

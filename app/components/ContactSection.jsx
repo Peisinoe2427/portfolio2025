@@ -7,7 +7,7 @@ import "./ContactSection.css";
 export default function Footer() {
     return (
         <div className="formBg">
-            <section className="formSection margins">
+            <section className="formSection margins" id="formSection">
                 <h2 className="visually-hidden">Contact section</h2>
                 <div>
                     <h2>Feel like we might <br />be a great fit?</h2>
